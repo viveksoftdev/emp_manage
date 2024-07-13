@@ -94,7 +94,7 @@ a:hover {
 
 #emp__form {
   position: absolute;
-  top: 50%;
+  top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--white-transucent);
@@ -140,7 +140,7 @@ label {
 #emp__container {
   position: absolute;
   background-color: var(--white-transucent);
-  top: 70%;
+  top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow-y: scroll;
@@ -191,7 +191,7 @@ td {
 #delete__employees{
   position: absolute;
   background-color: var(--white-transucent);
-  top: 50%;
+  top: 105%;
   left: 50%;
   transform: translate(-50%,-50%);
   width:50%;
