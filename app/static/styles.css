@@ -21,6 +21,7 @@ body {
 main{
   color:var(----white-transucent);
   background-color: var(--purple-shade);
+  list-style:none;
 }
 .btnContainer {
   display: flex;
