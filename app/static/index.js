@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //csrf token value
   const formData = document.getElementById("emp__form");
   const formSubmitBtn = document.getElementById("form__submit");
-  const url = "http://localhost:8000/post";
+  const url = "https://emp-manage-ax11.onrender.com/post";
   console.log(formData);
   console.log(formSubmitBtn);
   // function for capturing and sending employee data to the backend
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const fetchAllEmployees = () => {
-    fetch("http://localhost:8000/show", {
+    fetch("https://emp-manage-ax11.onrender.com/show", {
       method: "GET",
     })
       .then((resp) => {
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //fuctions related to deleting employee
 
   const deleteEmployee = (data) => {
-    fetch(`http://localhost:8000/delete`, {
+    fetch(`https://emp-manage-ax11.onrender.com/delete`, {
       method: "DELETE",
       body:data,
       headers: {
@@ -234,7 +234,7 @@ document.addEventListener('click',(event)=>{
     })
     
     alert(`{sending to the backend ${Object.values(updateObject)}`)
-    const updateUrl = 'http://localhost:8000/updateview'
+    const updateUrl = 'https://emp-manage-ax11.onrender.com/updateview'
     sendEmployeeDataTobackend(updateUrl,JSON.stringify(updateObject))
     isEditing = false;
     
