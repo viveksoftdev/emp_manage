@@ -140,7 +140,7 @@ label {
 #emp__container {
   position: absolute;
   background-color: var(--white-transucent);
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow-y: scroll;
