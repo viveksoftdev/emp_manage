@@ -31,7 +31,7 @@ ol{
 .btnContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: 100vh;
   padding-top:1.5em;
   
