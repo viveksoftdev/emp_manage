@@ -30,7 +30,7 @@ body {
   margin: 0 auto;
   gap: 0.3em;
   background-color: var(--purple-shade);
-  margin-top:10em;
+  
 }
 button {
   width: 12em;
