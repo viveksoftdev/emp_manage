@@ -21,10 +21,12 @@ body {
 main{
   color:var(--white-transucent);
   background-color: var(--purple-shade);
-  list-style:none;
   max-width:900px;
-  width:80%;
   margin:0 auto;
+  padding:1.3em;
+}
+ol{
+  list-style:none;
 }
 .btnContainer {
   display: flex;
@@ -231,9 +233,12 @@ td {
 @media (max-width:991px){
   button{
     width: 80%;
+    align-self:center;
+    justify-self:start;
   }
   .btnContainer{
     flex-direction: column;
+    justify-content:flex-start;
   }
   #emp__container{
     width:70%;
@@ -248,6 +253,8 @@ td {
 @media (max-width:768px){
   button{
     width: 80%;
+    align-self:center;
+    justify-self:start;
   }
   .btnContainer{
     flex-direction: column;
