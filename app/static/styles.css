@@ -24,12 +24,14 @@ main{
   list-style:none;
   max-width:900px;
   width:80%;
+  margin:0 auto;
 }
 .btnContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
+  padding-top:1.5em;
   
   margin: 0 auto;
   gap: 0.3em;
