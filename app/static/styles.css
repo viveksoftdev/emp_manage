@@ -18,8 +18,9 @@ body {
 }
 
 /* styles for the btnContainer*/
-#main__section{
+main{
   color:var(----white-transucent);
+  background-color: var(--purple-shade);
 }
 .btnContainer {
   display: flex;
