@@ -1,12 +1,155 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
     <title>Employee Management App</title>
 </head>
 <body>
-    <!--Test heading-->
-    <h1>Hello world</h1>
+    <!--Employee Add Form-->
+    <div class="hidden"id="delete__employees">
+        <input id="delete__user-email"type="'email" placeholder="Enter email"/>
+        <button id="delete__user">Delete User</button>
+    </div>
+    <div id="emp__container" class="employee__container hidden">
+        <table id="table">
+            <thead>
+                <tr id="table__head">
+                    <th contenteditable="true">Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+           
+        </table>
+        <button id="closeBtn">Close</button>
+    </div>
+    <div class="hidden container" id="form__container">
+        <form action="" class="" id="emp__form">
+            {% csrf_token %}
+            <!--Form section general user info-->
+            <div class="general__info">
+                <label for="name">Full Name</label>
+                <input name="name" id="name" type="text">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email">
+                <label for="age">Age</label>
+                <input name="age"  id ="age" type="number">
+                <label for="gender">Gender</label>
+                <select name="gender">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+                <label for="phone">Phone</label>
+                <input name="phone" id="phone" type="text">
+
+            </div>
+            <!--Form section general user info-->
+            
+            <div class="image__input">
+                <label for="image">Image</label>
+                <input name="image" id="image" type="file" accept="image/*">
+            </div>
+
+            <!--Address form section-->
+            <div class="address__container">
+                <label for="street">Street</label>
+                <input name="street1" id="street" type="text">
+                <label for="house">House</label>
+                <input name="house1" id="house" type="text">
+                <label for="city">City</label>
+                <input name="city1" id="city" type="text">
+                <label for="state">State</label>
+                <input name="state1" id="state" type="text">
+
+            </div>
+            <!--Address form section-->
+
+
+            <!--Work Experience form section-->
+            <div id="work__experiece-container">
+                <div class="work__experience">
+                    <label for="company">Company Name</label>
+                    <input name="company1" type="text" class="" id="company1">
+                    <label for="from__date">From Date</label>
+                    <input name="start__date1" type="date" class="" id="start__date1">
+                    <label for="to__date">To Date</label>
+                    <input name="to__date1" type="date" class="" id="to__date1">
+                    <label for="address">Company Address</label>
+                    <input name="address1" id="address1" type="text">
+                </div>
+            </div>
+            <button class="" id="add__work">Add Work</button>
+            <!--Work Experience-->
+
+            <!--Qualifications form section-->
+            <div id="qualifications__container">
+                <div class="qualification">
+                    <label for="qualifiction">Qualifiction</label>
+                    <input name="qualification1" id="qualification1" type="text">
+                    <label for="percentage">Percentage</label>
+                    <input name="percentage1" id="percentage1" type="number">
+                </div>
+            </div>
+            <button id="add__qualifications">Add Qualifiction</button>
+             <!--Qualifications form section-->
+
+             <!--Projects Description section-->
+            <div id="projects__container">
+                <div class="project">
+                    <label for="title">Project Title</label>
+                    <input name="title1" id="title1" type="text">
+                    <label for="project__description">Description</label>
+                    <input name="project__description1" id="project__description1" type="text">
+                </div>
+            </div>
+            <button class="" id="add__projects">Add Projects</button>
+            <!--Projects Description section-->
+
+            <button class="" id="form__submit">Submit</button>
+            <button id="closeBtnEmployee">Close</button>
+        </form>
+        
+    </div>
+    <!--Employee Add Form-->
+
+   
+    <!--Heading container section-->
+    <div class="heading__container-main container">
+        <div class="heading__container">
+            <h1>Employee Management App</h1>
+            <p>Human resource Management at fingertips.</p>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li class="nav__links-item">About</li>
+                <li class="nav__links-item">101</li>
+            </ul>
+        </nav>
+    </div>
+
+
+     <!--Heading container section-->
+    
+    <!--Buttons for operations on Employees  -->
+    <div class="btnContainer container">
+        
+        <button id="show"   class="">Show Employees</button>
+        <button id="add"    class="">Add Employees</button>
+        <button id="delete" class="">Delete Employees</button>
+    </div>
+    <!--Buttons for operations on Employees  -->
+
+    <!--Javascript section-->
+    <script src="{% static 'dynamicFormAddition.js' %}"></script>
+    <script src="{% static 'toggleEmployees.js' %}"></script>
+    <script src="{% static 'index.js' %}" defer></script>
+
+    <!--Javascript section-->
 </body>
 </html>

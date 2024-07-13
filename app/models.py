@@ -9,7 +9,7 @@ class Employee(models.Model):
                       ('o','Others'))
 
     name = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
+    email = models.EmailField(max_length=255,unique=True)
     age = models.PositiveIntegerField()
     gender = models.CharField(max_length=1,choices=GENDER_CHOICES)
     phone = models.CharField(max_length=15)
@@ -17,6 +17,8 @@ class Employee(models.Model):
     workExp = models.TextField()
     qualifications = models.TextField()
     projects = models.TextField()
+    photo = models.TextField()
+    
 
 
     def __str__(self):
