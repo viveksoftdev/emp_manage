@@ -19,9 +19,11 @@ body {
 
 /* styles for the btnContainer*/
 main{
-  color:var(----white-transucent);
+  color:var(--white-transucent);
   background-color: var(--purple-shade);
   list-style:none;
+  max-width:900px;
+  width:80%;
 }
 .btnContainer {
   display: flex;
